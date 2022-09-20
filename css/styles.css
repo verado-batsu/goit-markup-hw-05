@@ -357,11 +357,33 @@ body {
 }
 
 .example-item {
+	position: relative;
 }
 
-.example-img {
+.example-item::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	height: 70px;
+	width: 100%;
+
+	background-color: rgba(47, 48, 58, 0.8);
 }
 
+.example-name {
+	position: absolute;
+	bottom: 27px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--tertiary-text-color);
+}
 /* Team */
 .main-team {
 	padding-top: 94px;
