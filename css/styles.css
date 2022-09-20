@@ -556,13 +556,56 @@ body {
 
 .portfolio-link {
 	display: block;
+	
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.portfolio-link:hover .portfolio-text,
+.portfolio-link:focus .portfolio-text {
+	opacity: 1;
+}
+.portfolio-link:hover .portfolio-thumb::before,
+.portfolio-link:focus .portfolio-thumb::before {
+	opacity: 1;
+}
+
+.portfolio-thumb {
+	position: relative;
+}
+
+.portfolio-thumb::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(33, 150, 243, 0.9);
+	opacity: 0;
+}
 
 .portfolio-img {}
+
+.portfolio-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+	padding: 63px 24px;
+
+	font-size: 18px;
+	line-height: 1.55;
+	letter-spacing: 0.03em;
+	color: var(--tertiary-text-color);
+
+	opacity: 0;
+}
 
 .border-basket{
 	padding: 20px 24px;
